@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="/libraries/vuejs.bootstraper.js"></script>
+        <script src="/libraries/resolveDependencies.js"></script>
+        <style>
+            body { 
+                background-image: url(background.png);
+                background-position: left bottom;
+                background-repeat: repeat;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+        </div>
+
+        <script>
+            const app = Vue.createApp(
+                {
+                    template: `<root-component></root-component>`,
+                    components: {
+                        RootComponent: Vue.defineAsyncComponent(() => VueBootstraper.loadComponent(`App.vue`))
+                    }
+                }
+            );
+            VueBootstraper.require = DependencyResolver;
+            VueBootstraper.application = app;
+
+            app.mount('#app');
+        </script>
+    </body>
+</html>
