@@ -1,8 +1,9 @@
 <html>
     <head>
-        <script src="https://unpkg.com/vue@next"></script>
-        <script src="/libraries/vuejs.bootstraper.js"></script>
-        <script src="/libraries/resolveDependencies.js"></script>
+        <script src="libraries/vue.js"></script>
+        <script src="libraries/vue-router.js"></script>
+        <script src="libraries/vuejs.bootstraper.js"></script>
+        <script src="libraries/resolveDependencies.js"></script>
         <style>
             body { 
                 background-image: url(background.png);
@@ -20,10 +21,34 @@
                 {
                     template: `<root-component></root-component>`,
                     components: {
-                        RootComponent: Vue.defineAsyncComponent(() => VueBootstraper.loadComponent(`App.vue`))
+                        RootComponent: Vue.defineAsyncComponent(() => VueBootstraper.loadComponent(`/components/App.vue`))
                     }
                 }
             );
+
+			const routes = [
+				{
+					path: `/mainpage`,
+					alias: `/`,
+					component: Vue.defineAsyncComponent(() => VueBootstraper.loadComponent(`/components/pages/MainPage.vue`))
+				},
+				{
+					path: `/apps/proxyemy`,
+					component: Vue.defineAsyncComponent(() => VueBootstraper.loadComponent(`/components/pages/ProxyEmy.vue`))
+				},
+				{
+					path: `/apps/proxyemy/documentation`,
+					component: Vue.defineAsyncComponent(() => VueBootstraper.loadComponent(`/components/pages/ProxyEmyDocs.vue`))
+				}
+			]
+
+			const router = VueRouter.createRouter({
+				history: VueRouter.createWebHashHistory(),
+				routes
+			});
+
+			app.use(router);
+
             VueBootstraper.require = DependencyResolver;
             VueBootstraper.application = app;
 
