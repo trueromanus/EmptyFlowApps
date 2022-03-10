@@ -1,11 +1,11 @@
- <template>
+<template>
     <div>
-        Main page
+        Lalalal
     </div>
 </template>
 
 <script>
 export default {
-    name: `MainPage`
+    name: `MainHeader`
 };
 </script>
