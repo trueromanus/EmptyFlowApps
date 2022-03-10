@@ -16,3 +16,9 @@ export default async function () {
 	}
 };
 </script>
+
+<style>
+.divider {
+    flex: 1;
+}
+</style>
