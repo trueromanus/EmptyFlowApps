@@ -8,7 +8,8 @@
 <script>
 export default async function () {
 	await globalComponents(
-		`/components/controls/MainHeader.vue`,
+		`/components/controls/ActiveLink.vue`,
+		`/components/controls/MainHeader.vue`
 	);
 
 	return {
