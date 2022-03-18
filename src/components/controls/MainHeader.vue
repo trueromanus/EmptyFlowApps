@@ -1,7 +1,7 @@
 <template>
     <div class="main-header-container">
         <div class="main-header-content-container">
-            <a>EmptyFlowApps</a>
+            <a>EmptyFlow Software</a>
             <div class="divider"></div>
             <active-link
                 title="Products"
@@ -40,6 +40,9 @@ export default {
     width: 900px;
     display: flex;
     flex-direction: row;
+}
+.main-header-content-container > a {
+    font-family: 'Open Sans', sans-serif;
 }
 .main-header-content-container > .active-link-container {
     margin-left: 10px;

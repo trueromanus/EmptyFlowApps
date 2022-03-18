@@ -1,0 +1,29 @@
+[
+    {
+        "title": "ProxyEmy",
+        "route": "/proxyemy",
+        "branch": "beta",
+        "description": "Local reverse proxy server fit as tool for development. Supporting HTTP/1.1 and WS.",
+        "icon": "proxyemy.svg",
+        "backgroundColor": "#bfbfbf",
+        "platforms": ["win", "linux"]
+    },
+    {
+        "title": "drComRead",
+        "route": "/drcomread",
+        "branch": "stable",
+        "description": "Application for reading digital comics. Supporting CBZ, CBR and local folders.",
+        "icon": "drcomread.svg",
+        "backgroundColor": "#4bb464",
+        "platforms": ["win10"]
+    },
+    {
+        "title": "ArdorQuery",
+        "route": "/ardorquery",
+        "branch": "alpha",
+        "description": "Tool for testing HTTP(s) endpoints like Websites, RESTful APIs and Web sockets.",
+        "icon": "ardor-icon.svg",
+        "backgroundColor": "#ff9999",
+        "platforms": ["win"]
+    }
+]
