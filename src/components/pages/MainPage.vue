@@ -16,6 +16,16 @@
                 <div class="main-page-app-content">
                     {{ item.description }}
                 </div>
+                <div class="main-page-app-platforms">
+                    <span>Platforms:</span>
+                    <img
+                        v-for="(platform, index) in item.platforms"
+                        :src="'/assets/icons/' + platform + '.svg'"
+                        :key="index"
+                        width="30"
+                        height="30"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -53,6 +63,9 @@ export default async function () {
     max-width: 240px;
     width: 240px;
 }
+.main-page-products-container > div:hover {
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, .5);
+}
 .main-page-app-title {
     height: 70px;
     display: flex;
@@ -76,6 +89,18 @@ export default async function () {
     height: 100px;
     padding: 10px;
     font-family: 'Roboto', sans-serif;
+}
+.main-page-app-platforms {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    height: 40px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.main-page-app-platforms > span {
+    flex: 1;
 }
 .main-page-branch {
     font-size: 10px;

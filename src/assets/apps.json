@@ -6,7 +6,7 @@
         "description": "Local reverse proxy server fit as tool for development. Supporting HTTP/1.1 and WS.",
         "icon": "proxyemy.svg",
         "backgroundColor": "#bfbfbf",
-        "platforms": ["win", "linux"]
+        "platforms": ["windows", "linux"]
     },
     {
         "title": "drComRead",
@@ -15,7 +15,7 @@
         "description": "Application for reading digital comics. Supporting CBZ, CBR and local folders.",
         "icon": "drcomread.svg",
         "backgroundColor": "#4bb464",
-        "platforms": ["win10"]
+        "platforms": ["windows"]
     },
     {
         "title": "ArdorQuery",
@@ -24,6 +24,6 @@
         "description": "Tool for testing HTTP(s) endpoints like Websites, RESTful APIs and Web sockets.",
         "icon": "ardor-icon.svg",
         "backgroundColor": "#ff9999",
-        "platforms": ["win"]
+        "platforms": ["windows", "linux"]
     }
 ]
