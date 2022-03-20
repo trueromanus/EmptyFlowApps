@@ -1,27 +1,27 @@
 [
     {
         "title": "ProxyEmy",
-        "route": "/proxyemy",
+        "route": "proxyemy",
         "branch": "beta",
-        "description": "Local reverse proxy server fit as tool for development. Supporting HTTP/1.1 and WS.",
+        "description": "Local reverse proxy server fit as tool for development. Supporting HTTP/1.1, WS and secure connections. The configuration is stored in a YAML file.",
         "icon": "proxyemy.svg",
         "backgroundColor": "#bfbfbf",
         "platforms": ["windows", "linux"]
     },
     {
         "title": "drComRead",
-        "route": "/drcomread",
+        "route": "drcomread",
         "branch": "stable",
-        "description": "Application for reading digital comics. Supporting CBZ, CBR and local folders.",
+        "description": "Application for reading digital comics. Supporting reading from CBZ(RAR), CBR(ZIP) and local folders. Organizing library and reading list included.",
         "icon": "drcomread.svg",
         "backgroundColor": "#4bb464",
         "platforms": ["windows"]
     },
     {
         "title": "ArdorQuery",
-        "route": "/ardorquery",
+        "route": "ardorquery",
         "branch": "alpha",
-        "description": "Tool for testing HTTP(s) endpoints like Websites, RESTful APIs and Web sockets.",
+        "description": "Tool for testing HTTP(s) endpoints from Websites, PWA, RESTful APIs and Web sockets.",
         "icon": "ardor-icon.svg",
         "backgroundColor": "#ff9999",
         "platforms": ["windows", "linux"]

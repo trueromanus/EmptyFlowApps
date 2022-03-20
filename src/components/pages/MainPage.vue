@@ -1,7 +1,7 @@
  <template>
     <div class="mainpage-container">
         <div class="main-page-products-container">
-            <div v-for="(item, index) in appList" :key="index">
+            <div v-for="(item, index) in appList" :key="index" @click="$router.push('/apps/' + item.route)">
                 <div class="main-page-app-title" :style="{'background-color': item.backgroundColor }">
                     <span>
                         {{ item.title }}

@@ -40,8 +40,8 @@
 					component: Vue.defineAsyncComponent(() => VueBootstraper.loadComponent(`/components/pages/MainPage.vue`))
 				},
 				{
-					path: `/apps/proxyemy`,
-					component: Vue.defineAsyncComponent(() => VueBootstraper.loadComponent(`/components/pages/ProxyEmy.vue`))
+					path: `/apps/:app`,
+					component: Vue.defineAsyncComponent(() => VueBootstraper.loadComponent(`/components/pages/AppPage.vue`))
 				},
 				{
 					path: `/apps/proxyemy/documentation`,
