@@ -24,8 +24,6 @@ function dependencyResolver() {
             }
 
             return module.exports;
-            
-            //TODO: add amd support
         },
         resolveStyles(url) {
             const isCache = this.loadedStyles[url];

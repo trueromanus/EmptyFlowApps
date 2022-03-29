@@ -4,6 +4,7 @@
     "description": "Local reverse proxy help you in Web development don't bother you have frontend project or lot backend microservices. You can easy bypass CORS issues and setup external microservices as it will be runned on local host.",
     "latestVersion": "0.0.4",
     "videoLink": "",
+    "backgroundColor": "#1ab394",
     "videoDescription": "",
     "screenshoots": [
         {

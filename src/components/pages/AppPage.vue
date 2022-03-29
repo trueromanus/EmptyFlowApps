@@ -1,6 +1,11 @@
  <template>
-    <div class="app-page-container">
-        <span>{{ application.title }}</span>
+    <div>
+        <div class="app-page-header-container" :style="{'background-color': application.backgroundColor}">
+            <div class="app-page-header-content">
+                <span class="app-page-header-title">{{ application.title }}</span>
+                <anchors-link :titles="titles"></anchors-link>
+            </div>
+        </div>
     </div>
  </template>
 
@@ -9,7 +14,14 @@ export default {
     name: `AppPage`,
     data() {
         return {
-            application: {}
+            application: {},
+            titles: [
+                "Overview",
+                "Requirements",
+                "Features",
+                "Screeshoots",
+                "Documentation"
+            ]
         }
     },
     async mounted() {
@@ -21,11 +33,24 @@ export default {
  </script>
 
  <style>
-.app-page-container {
+.app-page-header-container {
+    height: 50px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+}
+.app-page-header-content {
+    width: 900px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    margin-top: 20px;
+}
+.app-page-header-title {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: white;
+    margin-right: 30px;
 }
  </style>
 
