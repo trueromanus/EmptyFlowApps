@@ -2,6 +2,7 @@
     <div class="anchor-link-container">
         <div
             class="anchor-link-item"
+            :class="{ 'anchor-link-item-seleted': selected === index }"
             v-for="(item, index) in titles"
             :key="index"
             @click="selectItem(index)">
@@ -48,14 +49,20 @@ export default {
     margin-right: 20px;
     color: white;
     width: 100%;
-    height: 40px;
+    height: 43px;
     display: flex;
     align-items: center;
     border-top-style: solid;
-    border-top-width: 2px;
+    border-top-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
     border-top-color: transparent;
+    border-bottom-color: transparent;
 }
 .anchor-link-item:hover {
     border-top-color: azure;
+}
+.anchor-link-item-seleted {   
+    border-bottom-color: white;
 }
 </style>
