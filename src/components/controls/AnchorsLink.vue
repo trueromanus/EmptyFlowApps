@@ -5,9 +5,9 @@
             :class="{ 'anchor-link-item-seleted': selected === index }"
             v-for="(item, index) in titles"
             :key="index"
-            @click="selectItem(index)">
+            @click="selectItem(index, item)">
             <span :style="{'font-size': selected === index ? '16px' : '14px'}">
-                {{ item }}
+                {{ item.title }}
             </span>
         </div>
     </div>
@@ -21,11 +21,13 @@ export default {
     props: {
         titles: Array
     },
+    emits: [`item-selected`],
     setup() {
         const selected = ref(0);
 
-        function selectItem(index) {
+        function selectItem(index, item) {
             selected.value = index;
+            this.$emit(`item-selected`, item);
         }
 
         return {

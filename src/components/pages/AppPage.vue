@@ -3,13 +3,24 @@
         <div class="app-page-header-container" :style="{'background-color': application.backgroundColor}">
             <div class="app-page-header-content">
                 <span class="app-page-header-title">{{ application.title }}</span>
-                <anchors-link :titles="titles"></anchors-link>
+                <anchors-link
+                    :titles="titles"
+                    @item-selected="sectionSelected($event)">
+                </anchors-link>
             </div>
         </div>
-        <div class="app-page-overview-container">
+        <div class="app-page-overview-container" ref="overview">
             <div class="app-page-overview-header-container">
                 <span>{{ application.description }}</span>
             </div>
+        </div>
+        <div class="app-page-features-container" ref="features">
+            <div class="app-page-features-header">
+                <span>{{ application.title }} features:</span>
+            </div>
+        </div>
+        <div class="app-page-documentation-container" ref="docs">
+            <span>{{ application.description }}</span>
         </div>
     </div>
  </template>
@@ -21,11 +32,26 @@ export default {
         return {
             application: {},
             titles: [
-                "Overview",
-                "Requirements",
-                "Features",
-                "Screeshoots",
-                "Documentation"
+                {
+                    title: "Overview",
+                    anchor: "overview"
+                },
+                {
+                    title: "Requirements",
+                    anchor: "requirements"
+                },
+                {
+                    title: "Features",
+                    anchor: "features"
+                },
+                {
+                    title: "Screeshoots",
+                    anchor: "screeshoots"
+                },
+                {
+                    title: "Documentation",
+                    anchor: "docs"
+                }
             ]
         }
     },
@@ -33,6 +59,11 @@ export default {
         const appName = this.$route.params.app;
         const response = await fetch(`/assets/${appName}.json`);
         this.application = await response.json();
+    },
+    methods: {
+        sectionSelected(item) {
+            this.$refs[item.anchor].scrollIntoView({ behavior: `smooth` });
+        }
     }
 }
  </script>
@@ -71,6 +102,34 @@ export default {
     margin-top: 20px;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
+}
+.app-page-features-container {
+    background-image: url(/assets/feature-background.avif);
+    background-position: top center;
+    min-height: 1200px;
+    display: flex;
+    justify-content: center;
+}
+.app-page-features-header {
+    width: 900px;
+    font-size: 22px;
+    font-weight: bold;
+    background: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.app-page-features-header > span {
+    margin-top: 30px;
+}
+.app-page-documentation-container {
+    background-image: url(/assets/documentation-background.jfif);
+    background-position: top center;
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
 }
  </style>
 
