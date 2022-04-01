@@ -15,8 +15,30 @@
             </div>
         </div>
         <div class="app-page-features-container" ref="features">
-            <div class="app-page-features-header">
-                <span>{{ application.title }} features:</span>
+            <div class="app-page-features-content">
+                <div class="app-page-features-header">
+                    <span>{{ application.title }} features:</span>
+                </div>               
+                <div class="app-page-features-items">
+                    <div
+                        v-for="(item, index) in application.features"
+                        :key="index"
+                        class="app-page-features-item">
+                        <div class="app-page-features-item-icon">
+                            <img
+                                :src="'/assets/icons/' + item.icon"
+                                width="80"
+                                height="80"
+                            />
+                        </div>
+                        <span class="app-page-features-item-title">
+                            {{ item.title }}
+                        </span>
+                        <span class="app-page-features-item-description">
+                            {{ item.description }}
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="app-page-documentation-container" ref="docs">
@@ -106,23 +128,26 @@ export default {
 .app-page-features-container {
     background-image: url(/assets/feature-background.avif);
     background-position: top center;
-    min-height: 1200px;
     display: flex;
     justify-content: center;
 }
-.app-page-features-header {
+.app-page-features-content {
     width: 900px;
     font-size: 22px;
     font-weight: bold;
     background: white;
     font-family: 'Roboto', sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 60px;
     margin-bottom: 60px;
 }
-.app-page-features-header > span {
-    margin-top: 30px;
+.app-page-features-header {
+    width: 100%;
+    margin-top: 30px;    
+    display: flex;
+    justify-content: center;
 }
 .app-page-documentation-container {
     background-image: url(/assets/documentation-background.jfif);
@@ -130,6 +155,38 @@ export default {
     min-height: 800px;
     display: flex;
     justify-content: center;
+}
+.app-page-features-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-gap: 10px;
+    padding-top: 50px;
+    margin-left: 50px;
+}
+.app-page-features-item {
+    width: 230px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+}
+.app-page-features-item-icon {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.app-page-features-item-title {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    padding: 4px;
+}
+.app-page-features-item-description {
+    font-size: 12px;
+    text-align: justify;
+    padding: 4px;
 }
  </style>
 

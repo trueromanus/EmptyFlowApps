@@ -21,7 +21,34 @@
     },
     "features": [
         {
-            
+            "icon": "breaking-link.svg",
+            "title": "Resolve CORS issues",
+            "description": "All you project (frontends or/and backends) will be on the same host, which will solve all cross-domain problems"
+        },
+        {
+            "icon": "https.svg",
+            "title": "HTTPS on local machine",
+            "description": "Test web applications/services that require a secure connection on a local machine like PWA, Android emulator etc"
+        },
+        {
+            "icon": "discover.svg",
+            "title": "Demystification HTTPS traffic",
+            "description": "Any external web service can be mapped to local http (not secure) endpoint. Any sniffers can be see all traffic without encryption"
+        },
+        {
+            "icon": "allinone.svg",
+            "title": "All (micro)services in one place",
+            "description": "All you (micro)services can be placed on one host inside human-readable aliases like http://localhost/authservice"
+        },
+        {
+            "icon": "settings.svg",
+            "title": "Configuration in YAML",
+            "description": "All settings of application can be stored in one YAML file and sharing with teammates via Git, DropBox etc"
+        },
+        {
+            "icon": "easy-to-use.svg",
+            "title": "Clean and simple UI",
+            "description": "The main goal is to simplify the functionality of the application as much as possible."
         }
     ]
 }
