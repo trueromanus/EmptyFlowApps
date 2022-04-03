@@ -7,11 +7,46 @@
                     :titles="titles"
                     @item-selected="sectionSelected($event)">
                 </anchors-link>
+                <a :href="application.githubLink">
+                    <img
+                        v-if="application.isOpenSource"
+                        src="/assets/icons/github.svg"
+                        width="30"
+                        height="30"
+                    />
+                </a>
             </div>
-        </div>
+        </div>       
         <div class="app-page-overview-container" ref="overview">
             <div class="app-page-overview-header-container">
                 <span>{{ application.description }}</span>
+            </div>
+        </div>
+        <div class="app-page-requirements-container" ref="requirements">
+            <div class="app-page-requirements-inner-container">
+                <div class="app-page-requirements-header">
+                    System Requirements
+                </div>
+                <div class="app-page-requirements-content">
+                    <div>
+                        <div class="app-page-requirements-subheader">
+                            Minimal
+                        </div>
+                        <requirements-table
+                            v-if="application.systemRequirements"
+                            :requirements="application.systemRequirements.minimal">
+                        </requirements-table>
+                    </div>
+                    <div>
+                        <div  class="app-page-requirements-subheader">
+                            Recommended
+                        </div>
+                        <requirements-table
+                            v-if="application.systemRequirements"
+                            :requirements="application.systemRequirements.recommended">
+                        </requirements-table>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="app-page-features-container" ref="features">
@@ -122,7 +157,7 @@ export default {
     text-align: center;
     width: 700px;
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 17px;
     font-family: 'Open Sans', sans-serif;
 }
 .app-page-features-container {
@@ -148,6 +183,47 @@ export default {
     margin-top: 30px;    
     display: flex;
     justify-content: center;
+}
+.app-page-requirements-container {
+    background-image: url(/assets/requirements-background.jpg);
+    background-position: top center;
+    display: flex;
+    justify-content: center;
+}
+.app-page-requirements-inner-container {
+    width: 900px;
+    background-color: white;
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    flex-direction: column;
+}
+.app-page-requirements-content {
+    display: flex;
+    flex-direction: row;
+}
+.app-page-requirements-content > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.app-page-requirements-header {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.app-page-requirements-subheader {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 .app-page-documentation-container {
     background-image: url(/assets/documentation-background.jfif);

@@ -10,7 +10,8 @@ export default async function () {
 	await globalComponents(
 		`/components/controls/ActiveLink.vue`,
 		`/components/controls/MainHeader.vue`,
-		`/components/controls/AnchorsLink.vue`
+		`/components/controls/AnchorsLink.vue`,
+		`/components/controls/RequirementsTable.vue`
 	);
 
 	return {

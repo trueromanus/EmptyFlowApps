@@ -12,12 +12,22 @@
             "link": ""
         }
     ],
-    "githubLink": "",
+    "isOpenSource": true,
+    "githubLink": "https://github.com/trueromanus/ProxyEmy",
     "systemRequirements": {
         "windows": ["10", "11"],
-        "processor": "",
-        "hardDriveSpace": "",
-        "ramSpace": ""
+        "minimal": {
+            "processor": "Intel, AMD",
+            "hardDriveSpace": "50 Mb",
+            "processorFrenquency": "2.0 Ghz",
+            "ramSpace": "1 Gb"
+        },
+        "recommended": {
+            "processor": "Intel, AMD",
+            "processorFrenquency": "2.40 Ghz",
+            "hardDriveSpace": "1 Gb",
+            "ramSpace": "4 Gb"
+        }
     },
     "features": [
         {
