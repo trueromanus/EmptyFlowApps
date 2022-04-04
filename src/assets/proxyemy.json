@@ -15,18 +15,35 @@
     "isOpenSource": true,
     "githubLink": "https://github.com/trueromanus/ProxyEmy",
     "systemRequirements": {
-        "windows": ["10", "11"],
+        "os": [
+            {
+                "title": "Windows 10, Windows 11",
+                "bit": "64-bit",
+                "icon": "windows.svg"
+            },
+            {
+                "title": "Linux",
+                "bit": "64-bit",
+                "icon": "linux.svg"
+            }
+        ],
         "minimal": {
             "processor": "Intel, AMD",
             "hardDriveSpace": "50 Mb",
             "processorFrenquency": "2.0 Ghz",
-            "ramSpace": "1 Gb"
+            "ramSpace": "1 Gb",
+            "directX": "9",
+            "openGL": "3.0",
+            "processorBitness": "64-bit"
         },
         "recommended": {
             "processor": "Intel, AMD",
             "processorFrenquency": "2.40 Ghz",
             "hardDriveSpace": "1 Gb",
-            "ramSpace": "4 Gb"
+            "ramSpace": "4 Gb",
+            "directX": "10",
+            "openGL": "4.6",
+            "processorBitness": "64-bit"
         }
     },
     "features": [

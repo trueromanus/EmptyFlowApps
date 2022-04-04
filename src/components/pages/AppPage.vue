@@ -47,6 +47,18 @@
                         </requirements-table>
                     </div>
                 </div>
+                <div
+                    v-if="application.systemRequirements"
+                    class="app-page-requirements-oses">
+                    <span>Supported operating systems:</span>
+                    <div class="app-page-requirements-oses-item" v-for="(item, index) in application.systemRequirements.os" :key="index">
+                        <img :src="'/assets/icons/' + item.icon" width="30" height="30" />
+                        <div>
+                            <span>{{ item.title }}</span>
+                        </div>
+                        <span>{{ item.bit }}</span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="app-page-features-container" ref="features">
@@ -263,6 +275,35 @@ export default {
     font-size: 12px;
     text-align: justify;
     padding: 4px;
+}
+.app-page-requirements-oses {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.app-page-requirements-oses-item {
+    font-size: 16px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+.app-page-requirements-oses-item >:nth-child(2) {
+    flex: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.app-page-requirements-oses-item > span {
+    margin-right: 10px;
 }
  </style>
 

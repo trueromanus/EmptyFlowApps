@@ -18,6 +18,14 @@
         </tr>
         <tr>
             <td>
+                Processor bitness
+            </td>
+            <td>
+                {{ requirements.processorBitness }}
+            </td>
+        </tr>
+        <tr>
+            <td>
                 Memory
             </td>
             <td>
@@ -30,6 +38,22 @@
             </td>
             <td>
                 {{ requirements.hardDriveSpace }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                DirectX
+            </td>
+            <td>
+                {{ requirements.directX }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                OpenGL
+            </td>
+            <td>
+                {{ requirements.openGL }}
             </td>
         </tr>
     </table>
@@ -51,10 +75,12 @@ export default {
 .requirements-table {
     width: 90%;    
     border-collapse: collapse;
-    border: 1px solid black;
+    border: 1px solid lightgray;
+    font-family: 'Open Sans', sans-serif;
 }
-.requirements-table tr td {
-    border: 1px solid black;
+.requirements-table td {
+    padding: 8px;
+    border-bottom: 1px solid lightgray;
 }
 .requirements-table td {
     width: 50%;
