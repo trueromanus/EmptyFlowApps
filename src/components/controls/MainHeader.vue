@@ -1,6 +1,7 @@
 <template>
     <div class="main-header-container">
         <div class="main-header-content-container">
+            <img src="/assets/icons/emptyflow.svg" width="30" height="30" />
             <a>EmptyFlow Software</a>
             <div class="divider"></div>
             <active-link
@@ -40,6 +41,10 @@ export default {
     width: 900px;
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+.main-header-content-container > img {
+    margin-right: 10px;
 }
 .main-header-content-container > a {
     font-family: 'Open Sans', sans-serif;

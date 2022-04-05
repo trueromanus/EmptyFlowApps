@@ -19,7 +19,35 @@
         </div>       
         <div class="app-page-overview-container" ref="overview">
             <div class="app-page-overview-header-container">
+                <div class="app-page-overview-application-title">
+                    <img
+                        :src="'/assets/icons/' + application.icon"
+                        width="36"
+                        height="36"
+                    />
+                    <span>
+                        {{ application.title }}
+                    </span>
+                </div>
                 <span>{{ application.description }}</span>
+                <div class="app-page-overview-download">
+                    <a :href="application.downloadLink" :style="{ 'background-color': application.backgroundColor }">Download</a>
+                </div>
+                <div class="app-page-overview-header-container-version">
+                    <span>Latest version {{ latestVersion }} </span>
+                    <span>Want to know what a changes in this version? Check out <a href="#">changelog</a></span>
+                </div>
+            </div>
+            <div class="app-page-overview-youtube">
+                <iframe
+                    width="500"
+                    height="300"
+                    src="https://www.youtube.com/embed/EDOzl5hEprs"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
         <div class="app-page-requirements-container" ref="requirements">
@@ -133,6 +161,14 @@ export default {
         sectionSelected(item) {
             this.$refs[item.anchor].scrollIntoView({ behavior: `smooth` });
         }
+    },
+    computed: {
+        latestVersion() {
+            if (!this.application.changelog) return "";
+            const item = this.application.changelog[0];
+            const date = new Date(item.date);
+            return item.version + ` published ` + date.toUTCString();
+        }
     }
 }
  </script>
@@ -160,17 +196,34 @@ export default {
 .app-page-overview-container {
     background-image: url(/assets/white-background.png);
     background-position: top center;
-    min-height: 700px;
+    min-height: 680px;
     background-color: #fff;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .app-page-overview-header-container {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    max-width: 700px;
     width: 700px;
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 17px;
     font-family: 'Open Sans', sans-serif;
+}
+.app-page-overview-youtube {
+    margin-top: 20px;
+}
+.app-page-overview-header-container-version {
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.app-page-overview-header-container-version > span {
+    margin-top: 8px;
 }
 .app-page-features-container {
     background-image: url(/assets/feature-background.avif);
@@ -304,6 +357,28 @@ export default {
 }
 .app-page-requirements-oses-item > span {
     margin-right: 10px;
+}
+.app-page-overview-application-title {
+    font-size: 34px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.app-page-overview-application-title > img {
+    margin-right: 10px;
+}
+.app-page-overview-download {
+    font-size: 18px;
+    margin-top: 20px;
+}
+.app-page-overview-download > a {
+    color: white;
+    padding: 10px;
+}
+.app-page-overview-download > a:hover {
+    color: white;
 }
  </style>
 

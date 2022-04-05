@@ -1,9 +1,9 @@
 {
     "title": "ProxyEmy",
     "branch": "beta",
-    "description": "Local reverse proxy help you in Web development don't bother you have frontend project or lot backend microservices. You can easy bypass CORS issues and setup external microservices as it will be runned on local host.",
-    "latestVersion": "0.0.4",
+    "description": "Local reverse proxy help you in Web development don't bother you have frontend project or lot backend microservices. You can easy bypass CORS issues and setup external microservices as it will be runned on local host. All application configuration can be stored in one YAML file and shared with teammates and friends.",
     "videoLink": "",
+    "icon": "proxyemy.svg",
     "backgroundColor": "#1ab394",
     "videoDescription": "",
     "screenshoots": [
@@ -13,6 +13,7 @@
         }
     ],
     "isOpenSource": true,
+    "downloadLink": "https://github.com/trueromanus/ProxyEmy/releases/latest",
     "githubLink": "https://github.com/trueromanus/ProxyEmy",
     "systemRequirements": {
         "os": [
@@ -76,6 +77,19 @@
             "icon": "easy-to-use.svg",
             "title": "Clean and simple UI",
             "description": "The main goal is to simplify the functionality of the application as much as possible."
+        }
+    ],
+    "changelog": [
+        {
+            "version": "0.0.4",
+            "date": "2022-02-23T00:00:00",
+            "bugfixes":[],
+            "newfeatures":[
+                "Added support WebSocket (WS/WSS) protocols",
+                "Added new option verifyCertificates for enabling strong check SSL certificates",
+                "Added About window"
+            ],
+            "changes":[]
         }
     ]
 }
