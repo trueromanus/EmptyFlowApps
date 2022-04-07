@@ -98,11 +98,11 @@ export default {
     background-color: lightgray;
 }
 .screenshoots-page-selected {
-    background-color: brown;
+    background-color: cornflowerblue;
     color: white;
 }
 .screenshoots-page-selected:hover {
-    background-color: brown;
+    background-color: cornflowerblue;
 }
 
 </style>
