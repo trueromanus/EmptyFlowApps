@@ -1,11 +1,11 @@
 {
     "title": "ProxyEmy",
     "branch": "beta",
-    "description": "Local reverse proxy help you in Web development don't bother you have frontend project or lot backend microservices. You can easy bypass CORS issues and setup external microservices as it will be runned on local host. All application configuration can be stored in one YAML file and shared with teammates and friends.",
+    "description": "Local reverse proxy help you in Web development don't bother you have frontend project or lot backend microservices. You can easy bypass CORS issues and setup external microservices as it will be runned on local host. All application configuration can be stored in one YAML file and shared with teammates and friends. Supported HTTP 1.1, TLS, WebSocket.",
     "videoLink": "",
     "icon": "proxyemy.svg",
     "backgroundColor": "#1ab394",
-    "videoDescription": "",
+    "youtubeVideo": "https://www.youtube.com/embed/EDOzl5hEprs",
     "screenshoots": [
         {
             "title": "Server information page contains all server configuration",
@@ -13,7 +13,7 @@
         },
         {
             "title": "Request Log page contains information about all performed requests",
-            "link": "/assets/screenshoots/proxyemyserverinfo.png"
+            "link": "/assets/screenshoots/proxyemyrequestlog.png"
         }
     ],
     "isOpenSource": true,

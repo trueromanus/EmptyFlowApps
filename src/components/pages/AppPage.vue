@@ -42,7 +42,7 @@
                 <iframe
                     width="500"
                     height="300"
-                    src="https://www.youtube.com/embed/EDOzl5hEprs"
+                    :src="application.youtubeVideo"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
