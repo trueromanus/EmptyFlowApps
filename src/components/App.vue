@@ -11,7 +11,8 @@ export default async function () {
 		`/components/controls/ActiveLink.vue`,
 		`/components/controls/MainHeader.vue`,
 		`/components/controls/AnchorsLink.vue`,
-		`/components/controls/RequirementsTable.vue`
+		`/components/controls/RequirementsTable.vue`,
+		`/components/controls/Screenshots.vue`
 	);
 
 	return {

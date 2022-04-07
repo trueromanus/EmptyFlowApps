@@ -116,6 +116,15 @@
                 </div>
             </div>
         </div>
+        <div class="app-page-screeshoots-container" ref="screeshoots">
+            <div class="app-page-screeshoots-header">
+                Screenshots
+            </div>
+            <screenshots
+                v-if="application"
+                :items="application.screenshoots">
+            </screenshots>
+        </div>
         <div class="app-page-documentation-container" ref="docs">
             <span>{{ application.description }}</span>
         </div>
@@ -296,6 +305,24 @@ export default {
     min-height: 800px;
     display: flex;
     justify-content: center;
+}
+.app-page-screeshoots-container {
+    background-image: url(/assets/white-background.png);
+    background-position: top center;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.app-page-screeshoots-header {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .app-page-features-items {
     width: 100%;

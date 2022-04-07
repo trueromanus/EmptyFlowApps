@@ -8,8 +8,12 @@
     "videoDescription": "",
     "screenshoots": [
         {
-            "title": "UI for setup all server setting",
-            "link": ""
+            "title": "Server information page contains all server configuration",
+            "link": "/assets/screenshoots/proxyemyserverinfo.png"
+        },
+        {
+            "title": "Request Log page contains information about all performed requests",
+            "link": "/assets/screenshoots/proxyemyserverinfo.png"
         }
     ],
     "isOpenSource": true,
