@@ -1,5 +1,5 @@
  <template>
-    <div>
+    <div class="app-page-container">
         <div class="app-page-header-container" :style="{'background-color': application.backgroundColor}">
             <div class="app-page-header-content">
                 <span class="app-page-header-title">{{ application.title }}</span>
@@ -126,7 +126,10 @@
             </screenshots>
         </div>
         <div class="app-page-documentation-container" ref="docs">
-            <span>{{ application.description }}</span>
+            <documentation-preview
+                v-if="application"
+                :items="application.documentations">
+            </documentation-preview>
         </div>
     </div>
  </template>
@@ -159,7 +162,7 @@ export default {
                     anchor: "docs"
                 }
             ]
-        }
+        };
     },
     async mounted() {
         const appName = this.$route.params.app;
@@ -173,7 +176,8 @@ export default {
     },
     computed: {
         latestVersion() {
-            if (!this.application.changelog) return "";
+            if (!this.application.changelog)
+                return "";
             const item = this.application.changelog[0];
             const date = new Date(item.date);
             return item.version + ` published ` + date.toUTCString();

@@ -53,6 +53,7 @@ export default async function () {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .main-page-products-container {
     display: grid;
