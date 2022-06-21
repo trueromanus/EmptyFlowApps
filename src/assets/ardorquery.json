@@ -1,0 +1,97 @@
+{
+    "title": "ArdorQuery",
+    "branch": "beta",
+    "description": "Tool for testing HTTP(s) endpoints from websites, REST(ful) APIs. Supported http/1.1 and h2 protocols. Simple UI and keyboard-focused control for creating/customizing requests.",
+    "videoLink": "",
+    "icon": "ardorquery.svg",
+    "backgroundColor": "#ff8080",
+    "youtubeVideo": "https://www.youtube.com/embed/EDOzl5hEprs",
+    "screenshoots": [
+        {
+            "title": "Creating query parts as simple text fields",
+            "link": "/assets/screenshoots/ardorqueryrequest.png"
+        },
+        {
+            "title": "Information about the result of the request",
+            "link": "/assets/screenshoots/ardorqueryresult.png"
+        }
+    ],
+    "isOpenSource": true,
+    "downloadLink": "https://github.com/trueromanus/ArdorQuery/releases/latest",
+    "githubLink": "https://github.com/trueromanus/ArdorQuery",
+    "systemRequirements": {
+        "os": [
+            {
+                "title": "Windows 10, Windows 11",
+                "bit": "64-bit",
+                "icon": "windows.svg"
+            },
+            {
+                "title": "Linux",
+                "bit": "64-bit",
+                "icon": "linux.svg"
+            }
+        ],
+        "minimal": {
+            "processor": "Intel, AMD",
+            "hardDriveSpace": "50 Mb",
+            "processorFrenquency": "2.0 Ghz",
+            "ramSpace": "2 Gb",
+            "directX": "9",
+            "openGL": "3.0",
+            "processorBitness": "64-bit"
+        },
+        "recommended": {
+            "processor": "Intel, AMD",
+            "processorFrenquency": "2.40 Ghz",
+            "hardDriveSpace": "1 Gb",
+            "ramSpace": "4 Gb",
+            "directX": "10",
+            "openGL": "4.6",
+            "processorBitness": "64-bit"
+        }
+    },
+    "features": [
+        {
+            "icon": "keyboard.svg",
+            "title": "Keyboard-focused control",
+            "description": "If you like cURL freedom where you can just type part of request in any order it mean you also like ArdorQuery where you can add/remove any part of request using only keyboard."
+        },
+        {
+            "icon": "https.svg",
+            "title": "Supported secure requests",
+            "description": "You can test any secure endpoints from local network or the internet. The http/1.1 and h2 protocols are supported."
+        },
+        {
+            "icon": "metrics.svg",
+            "title": "Metrics and timers",
+            "description": "Each response contains time, size in bytes and size in human-readable format."
+        },
+        {
+            "icon": "format.svg",
+            "title": "Syntax highlighting",
+            "description": "The application supports syntax highlighting of JSON, HTML, XML formats and displays images in JPEG, PNG and WEBp formats."
+        },
+        {
+            "icon": "settings.svg",
+            "title": "Import and Export",
+            "description": "Supporting import/export from/to clipboard or plain file. The format is same as you using in application."
+        },
+        {
+            "icon": "easy-to-use.svg",
+            "title": "Clean and simple UI",
+            "description": "The main goal is to simplify the functionality of the application as much as possible."
+        }
+    ],
+    "changelog": [
+        {
+            "version": "0.0.1",
+            "date": "2022-07-20T00:00:00",
+            "bugfixes":[],
+            "newfeatures":[
+                "Initial version"
+            ],
+            "changes":[]
+        }
+    ]
+}

@@ -21,8 +21,8 @@
         "title": "ArdorQuery",
         "route": "ardorquery",
         "branch": "alpha",
-        "description": "Tool for testing HTTP(s) endpoints from Websites, PWA, RESTful APIs and Web sockets.",
-        "icon": "ardor-icon.svg",
+        "description": "Tool for testing HTTP(s) endpoints from websites, RESTful APIs. Supported HTTP/1.1 and h2 protocols.",
+        "icon": "ardorquery.svg",
         "backgroundColor": "#ff9999",
         "platforms": ["windows", "linux"]
     }
