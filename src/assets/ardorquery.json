@@ -99,29 +99,29 @@
         "leftColumn": [
             {
                 "title": "Getting Started",
-                "route": "gettingstarted"
+                "route": "/documentation/ardorquery/gettingstarted"
             },
             {
                 "title": "Field management",
-                "route": "fieldmanagement"
+                "route": "/documentation/ardorquery/fieldmanagement"
             },
             {
                 "title": "Performing queries",
-                "route": "performingqueries"
+                "route": "/documentation/ardorquery/performingqueries"
             }
         ],
         "rightColumn": [
             {
                 "title": "Creating queries",
-                "route": "creatingqueries"
+                "route": "/documentation/ardorquery/creatingqueries"
             },
             {
                 "title": "Import and export fields",
-                "route": "importandexport"
+                "route": "/documentation/ardorquery/importandexport"
             },
             {
                 "title": "Getting response result",
-                "route": "gettingresponseresult"
+                "route": "/documentation/ardorquery/gettingresponseresult"
             }
         ]
     }

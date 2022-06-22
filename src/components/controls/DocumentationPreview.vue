@@ -9,13 +9,31 @@
             </div>
             <div class="documentation-columns" v-if="items">
                 <div class="documentation-right-align">
-                    <div v-for="(leftitem, index) in items.leftColumn" :key="index">
-                        <span>{{ leftitem.title }} </span>
+                    <div
+                        class="documentation-item-container"
+                        v-for="(leftitem, index) in items.leftColumn"
+                        :key="index">
+                        <active-link
+                            :title="leftitem.title"
+                            text-decoration="none"
+                            text-transform="none"
+                            color="blue"
+                            @link-pressed="$router.push(leftitem.route)">
+                        </active-link>
                     </div>
                 </div>
                 <div class="documentation-left-align">
-                    <div v-for="(rightitem, index) in items.rightColumn" :key="index">
-                        <span>{{ rightitem.title }} </span>
+                    <div
+                        class="documentation-item-container"
+                        v-for="(rightitem, index) in items.rightColumn"
+                        key="index">
+                        <active-link
+                            :title="rightitem.title"
+                            color="blue"
+                            text-decoration="none"
+                            text-transform="none"
+                            @link-pressed="$router.push(rightitem.route)">
+                        </active-link>
                     </div>
                 </div>
             </div>
@@ -63,20 +81,24 @@ export default {
 .documentation-columns {
     display: flex;
     flex-direction: row;
+    margin-bottom: 60px;
 }
 .documentation-columns > div {
     margin-top: 10px;
-    width: 200px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .documentation-right-align {
     align-items: flex-end;
-    margin-right: 10px;
+    margin-right: 30px;
 }
 .documentation-left-align {
     align-items: flex-start;
-    margin-left: 10px;
+    margin-left: 30px;
+}
+.documentation-item-container {
+    margin-top: 10px;
 }
 </style>

@@ -306,7 +306,6 @@ export default {
 .app-page-documentation-container {
     background-image: url(/assets/documentation-background.jfif);
     background-position: top center;
-    min-height: 800px;
     display: flex;
     justify-content: center;
 }

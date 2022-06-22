@@ -1,5 +1,8 @@
 <template>
-    <div class="active-link-container" @click="$emit('link-pressed')">
+    <div
+        class="active-link-container"
+        :style="{'color': color, 'text-transform': textTransform, 'text-decoration': textDecoration }"
+        @click="$emit('link-pressed')">
         {{ title }}
     </div>
 </template>
@@ -11,6 +14,18 @@ export default {
         title: {
             type: String,
             required: true
+        },
+        color: {
+            type: String,
+            default: _ => `black`
+        },
+        textTransform: {
+            type: String,
+            default: _ => `uppercase`
+        },
+        textDecoration: {
+            type: String,
+            default: _ => `underline`
         }
     }
 };
@@ -18,10 +33,7 @@ export default {
 
 <style>
 .active-link-container {
-    color: black;
     font-size: 18px;
-    text-decoration: underline;
-    text-transform: uppercase;
     cursor: pointer;
 }
 </style>
