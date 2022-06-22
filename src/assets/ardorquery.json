@@ -93,5 +93,36 @@
             ],
             "changes":[]
         }
-    ]
+    ],
+    "documentations": {
+        "pizda": 5,
+        "leftColumn": [
+            {
+                "title": "Getting Started",
+                "route": "gettingstarted"
+            },
+            {
+                "title": "Field management",
+                "route": "fieldmanagement"
+            },
+            {
+                "title": "Performing queries",
+                "route": "performingqueries"
+            }
+        ],
+        "rightColumn": [
+            {
+                "title": "Creating queries",
+                "route": "creatingqueries"
+            },
+            {
+                "title": "Import and export fields",
+                "route": "importandexport"
+            },
+            {
+                "title": "Getting response result",
+                "route": "gettingresponseresult"
+            }
+        ]
+    }
 }
