@@ -65,6 +65,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 30px;
 }
 .screenshoots-content {
     max-width: 750px;
